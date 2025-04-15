@@ -16,3 +16,11 @@ class BootstrapAuthenticationForm(AuthenticationForm):
                                widget=forms.PasswordInput({
                                    'class': 'form-control',
                                    'placeholder':'Password'}))
+
+
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=255)
+    phone = forms.RegexField(regex=r'^\d{11}$')
+    email = forms.EmailField(required=True)
+    content = forms.CharField(widget=forms.Textarea, required = True)
