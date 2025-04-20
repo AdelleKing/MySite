@@ -1259,7 +1259,7 @@ body.is-preload #bg:before {
         }
 
     #header .logo {
-        background-image:url('../images/logo2.png');
+        background-image:url('../images/logo.png');
         background-size: 140%;
         background-repeat: no-repeat;
         width: 5.5rem;
@@ -1267,6 +1267,13 @@ body.is-preload #bg:before {
         line-height: 5.5rem;
         border: solid 1px #ffffff;
         border-radius: 100%;
+    }
+
+    #header .logo img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; /* Ensures the image takes on the circular shape */
+        object-fit: cover; /* Makes the image fit snugly without distortion */
     }
 
         #header .logo .icon:before {

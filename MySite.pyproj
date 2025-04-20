@@ -61,6 +61,7 @@
   <ItemGroup>
     <Content Include="app\static\app\content\noscript.css" />
     <Content Include="app\static\app\images\overlay.png" />
+    <Content Include="app\static\app\images\pic6.jpg" />
     <Content Include="app\static\app\scripts\breakpoints.min.js" />
     <Content Include="app\static\app\scripts\browser.min.js" />
     <Content Include="app\static\app\scripts\jquery.min.js" />
