@@ -107,6 +107,24 @@ input, select, textarea {
 .resourcestext{
     font-size: 10px;
 }
+
+
+.resourcesArrows {
+    text-align: center; /* Centers the links */
+}
+
+.resourcesArrows a {
+    display: inline-block;
+    text-decoration: none; /* Removes default underline */
+    font-weight: bold; /* Makes them stand out */
+    color: #fc0303; /* Highlighting with a distinct color */
+    transition: color 0.3s ease-in-out; /* Smooth color change */
+}
+
+    .resourcesArrows a:hover {
+        color: #fc0303; /* Changes color on hover */
+        text-decoration: underline; /* Adds underline on hover */
+    }
 /*******************/
 /* Basic */
 @-ms-viewport {
