@@ -75,8 +75,40 @@ input, select, textarea {
     appearance: none;
 }
 
-/* Basic */
 
+/* Project specific */
+
+.communitypage {
+    opacity: 1 !important;
+    display: block !important;
+}
+
+.ElementsTitle {
+    width: 90%;
+    padding-bottom: 0.5rem;
+    margin: 0 0 2rem 0;
+}
+
+.resourcesArrows {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Push elements to opposite sides */
+}
+
+    .resourcesArrows h2 {
+        margin: 0; /* Remove default margin */
+    }
+
+    .resourcesArrows i {
+        font-size: 24px; /* Adjust the icon size */
+        color: #007bff; /* Change the color if needed */
+    }
+
+.resourcestext{
+    font-size: 10px;
+}
+/*******************/
+/* Basic */
 @-ms-viewport {
     width: device-width;
 }
@@ -1151,6 +1183,80 @@ body.is-preload #bg:before {
     background-color: #000000;
 }
 
+
+/* BG - community */
+
+#bg2 {
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+    -webkit-backface-visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+    #bg2:before, #bg2:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #bg2:before {
+        -moz-transition: background-color 2.5s ease-in-out;
+        -webkit-transition: background-color 2.5s ease-in-out;
+        -ms-transition: background-color 2.5s ease-in-out;
+        transition: background-color 2.5s ease-in-out;
+        -moz-transition-delay: 0.75s;
+        -webkit-transition-delay: 0.75s;
+        -ms-transition-delay: 0.75s;
+        transition-delay: 0.75s;
+       /* background-image: linear-gradient(to top, rgba(19, 21, 25, 0.9), rgba(19, 21, 25, 0.9)), url("../images/pic6.jpg");*/
+        background-size: 100%;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+        z-index: 2;
+    }
+
+    #bg2:after {
+        -moz-transform: scale(1.125);
+        -webkit-transform: scale(1.125);
+        -ms-transform: scale(1.125);
+        transform: scale(1.125);
+        -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
+        -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
+        -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
+        transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+        /*background-image: url("../images/pic6.jpg");*/
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat, no-repeat;
+        z-index: 1;
+    }
+
+body.is-article-visible #bg2:after {
+    -moz-transform: scale(1.0825);
+    -webkit-transform: scale(1.0825);
+    -ms-transform: scale(1.0825);
+    transform: scale(1.0825);
+    -moz-filter: blur(0.2rem);
+    -webkit-filter: blur(0.2rem);
+    -ms-filter: blur(0.2rem);
+    filter: blur(0.2rem);
+}
+
+body.is-preload #bg2:before {
+    background-color: #000000;
+}
+
 /* Wrapper */
 
 #wrapper {
@@ -1525,6 +1631,10 @@ body.is-preload #header {
         border-radius: 4px;
         opacity: 0;
     }
+
+
+    
+
 
         #main article.active {
             -moz-transform: translateY(0);
