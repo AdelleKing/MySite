@@ -125,6 +125,65 @@ input, select, textarea {
         color: #fc0303; /* Changes color on hover */
         text-decoration: underline; /* Adds underline on hover */
     }
+
+
+
+.pricing-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing-box {
+    flex: 1;
+    max-width: 320px;
+}
+
+    /* Add vertical dividers */
+    .pricing-box:not(:last-child) {
+        border-right: 2px solid #ccc;
+    }
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Styles for the navigation container */
+.nav-container {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Flexbox for navigation list */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    justify-content: center;
+}
+
+/* Navigation items */
+.nav-item {
+    margin: 5px;
+}
+
+    .nav-item a {
+        display: inline-block;
+        padding: 12px 20px;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 200px; /* Ensures a consistent box size */
+        text-align: center;
+    }
+
+
+
+
 /*******************/
 /* Basic */
 @-ms-viewport {
@@ -1485,7 +1544,7 @@ body.is-preload #bg2:before {
         top: 0;
         left: calc(50% - 1px);
         width: 1px;
-        height: 100%;
+        height: 85%;
         background: #ffffff;
     }
 
@@ -1560,7 +1619,7 @@ body.is-preload #header {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 930px) {
 
     #header {
         padding: 1.5rem 0;

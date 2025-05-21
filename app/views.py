@@ -7,8 +7,10 @@ from django.shortcuts import redirect, render
 from django.http import HttpRequest
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.contrib.auth import update_session_auth_hash
+from django.contrib import messages
 
-from .forms import ContactForm
+from .forms import *
 
 def home(request):
     """Renders the home page."""
@@ -46,4 +48,20 @@ def home(request):
         }
     )
 
+
+
+def password_change(request):
+    if request.method == "POST":
+        form = PasswordChangeForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)  # Keeps user logged in after password change
+            messages.success(request, "Your password was successfully changed!")  # Success message
+            return redirect("home")  # Redirect to the home page
+        else:
+            messages.error(request, "There was an error changing your password. Please try again.")  # Error message
+    else:
+        form = PasswordChangeForm(user=request.user)
+
+    return render(request, "registration/password_change_form.html", {"form": form})
 

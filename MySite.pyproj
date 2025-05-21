@@ -82,6 +82,7 @@
     <Content Include="app\static\app\scripts\main.js" />
     <Content Include="app\static\app\scripts\util.js" />
     <Content Include="app\templates\app\email.html" />
+    <Content Include="app\templates\app\password_change.html" />
     <Content Include="community\templates\community\community.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />

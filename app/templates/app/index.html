@@ -14,26 +14,27 @@
         </div>
         <div class="content">
             <div class="inner">
-                <h1>Tech With Adelle</h1>
+                <h1>Digital Solutions</h1>
                 <p>
                     Empowering you with tailored tech solutions, so you can run your business with confidence and ease!
                 </p>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#intro">Working With Me</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#work">Client Projects</a></li>
-                <li><a href="#contact">Lets Connect</a></li>
+        <nav class="nav-container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#intro">Working With Me</a></li>
+                <li class="nav-item"><a href="#community">Events</a></li>
+                <li class="nav-item"><a href="#work">Client Projects</a></li>
+                <li class="nav-item"><a href="#contact">Let's Connect</a></li>
                 {% if request.user.is_authenticated %}
-                <li><a href="#resources">Resources</a></li>
+                <li class="nav-item"><a href="#resources">Resources</a></li>
                 {% endif %}
             </ul>
         </nav>
     </header>
     {% if request.user.is_authenticated %}
     <a href="{% url 'logout' %}" class="dropdown-item">Logout</a>
+    <a href="{% url 'password_change' %}" class="dropdown-item">Change Password</a>
     {% endif %}
 </div>
 
@@ -50,14 +51,47 @@
         </p>
         <h3 class="major">How I Can Help</h3>
         <ul>
-            <li><strong>Website/App Development:</strong> Creating scalable digital products, including essential business tools.</li>
-            <li><strong>Digital Transformation:</strong> Reviewing ways to utilise digital tools to enhance performance.</li>
-            <li><strong>Training and Support:</strong> Providing training on well known available products to you or your team.</li>
-            <li><strong>Long-Term Digital Planning:</strong> Supporting you with your strategic digital transformation which grows with your business.</li>
+            <li>I understand your <strong>pain points</strong> and identify tools and resources based on your <strong>industry, budget and growth plans.</strong> </li>
+            <li><strong>Onboard and Implement</strong> your chosen tools, including configuration, setup and user permissions if needed </li>
+            <li>Support with data migration if needed and <strong>align your current processes</strong> to the tools</li>
+            <li>Support with <strong>training</strong> and best practices you and your team can implement</li>
+            <li>Identify automation opportunities <strong>with ongoing tech support and troubleshooting</strong></li>
+            <!--<li><strong>Website/App Development:</strong> Creating scalable digital products, including essential business tools.</li>
+        <li><strong>Digital Transformation:</strong> Reviewing ways to utilise digital tools to enhance performance.</li>
+        <li><strong>Training and Support:</strong> Providing training on well known available products to you or your team.</li>
+        <li><strong>Long-Term Digital Planning:</strong> Supporting you with your strategic digital transformation which grows with your business.</li>-->
         </ul>
-        <h3 class="major">Other support areas I offer</h3>
-        <p>If you are looking to begin your journey with technology solutions and programming languages I can help you on your journey. Within the resources area I have links to various tools which you may find useful. Also, check out the events area to join study groups. </p>
-        <p></p>
+        <!--<h3 class="major">Other support areas I offer</h3>
+    <p>If you are looking to begin your journey with technology solutions and programming languages I can help you on your journey. Within the resources area I have links to various tools which you may find useful. Also, check out the events area to join study groups. </p>
+    <p></p>-->
+        <h3 class="major">Choose the model which works best for you:</h3>
+        <div class="pricing-container">
+            <div class="pricing-box">
+                <h3>Essentials</h3>
+                <p>Ideal for businesses looking to streamline essential processes.</p>
+                <ul style="list-style: none;">
+                    <li>Initial consultation - &pound;150</li>
+                    <li>Pay as you go - monthly cost - &pound;200</li>
+
+                </ul>
+            </div>
+            <div class="pricing-box">
+                <h3>Growth</h3>
+                <p>Perfect for growing businesses with automation needs. With access to online resources and the weekly Community and Masterclass sessions.</p>
+                <ul style="list-style: none;">
+                    <li>Initial consultation - &pound;150</li>
+                    <li>12 month subscription monthly cost - &pound;150 upfront cost - &pound;1,700</li>
+                </ul>
+            </div>
+            <div class="pricing-box">
+                <h3>Full Optimisation</h3>
+                <p>For businesses requiring on-demand tech support and larger project implementation.</p>
+                <ul style="list-style: none;">
+                    <li>Initial consultation - &pound;150</li>
+                    <li>12 month subscription monthly cost - &pound;250 upfront cost - &pound;2,900</li>
+                </ul>
+            </div>
+        </div>
 
     </article>
 
@@ -65,7 +99,7 @@
     <article id="work">
         <h2 class="major">Client Projects</h2>
         <span class="image main"><img src="{% static 'app/images/pic2.png' %}" alt="clients handshaking" /></span>
-        <p style="justify-self:center">Here are some of my prevous projects:</p>
+        <p style="justify-self:center">Here are some of my previous projects:</p>
         <div>
             <div>
                 <h3>Wine Shack</h3>
@@ -77,14 +111,14 @@
             <div>
                 <h3>Video Interaction Guidance</h3>
             </div>
-           <img src="{% static 'app/images/pic3.png' %}" style="height:80%; width:85%" alt="parents and thier child">
+            <img src="{% static 'app/images/pic3.png' %}" style="height:80%; width:85%" alt="parents and thier child">
             <p>A user-friendly website providing this business with a digital presence to redirect their customers.</p>
         </div>
         <div>
             <div>
                 <h3>Skin Dedication Training</h3>
             </div>
-            <!--<a href="https://skindedicationtraining-90fe5cd846ed.herokuapp.com/" target="_blank">--><img src="{% static 'app/images/pic4.png' %}" style="height:80%; width:85%"alt="skin dedication website"><!--</a>-->
+            <!--<a href="https://skindedicationtraining-90fe5cd846ed.herokuapp.com/" target="_blank">--><img src="{% static 'app/images/pic4.png' %}" style="height:80%; width:85%" alt="skin dedication website"><!--</a>-->
             <p>A fully bespoke site, providing user management, course content purchases, booking system and integration with Google products.</p>
         </div>
         <div>
@@ -97,7 +131,7 @@
     </article>
 
     <!-- Community -->
-    <article id="community">
+    <!--<article id="community">
         <h2 class="major">Community</h2>
         <span class="image main"><img src="{% static 'app/images/pic6.jpg' %}" alt="" /></span>
         <p>
@@ -108,8 +142,29 @@
         </p>
         <ul style="list-style: none;">
             <li><a href="#" class="dropdown-item">Register</a></li>
-            <li><a href="{% url 'login' %}" class="dropdown-item">Login</a></li>            
-        </ul>        
+            <li><a href="{% url 'login' %}" class="dropdown-item">Login</a></li>
+        </ul>
+    </article>-->
+
+    <!-- Events -->
+    <article id="community">
+        <h2 class="major">Events</h2>
+        <span class="image main"><img src="{% static 'app/images/pic6.jpg' %}" alt="" /></span>
+        <p>
+            A vibrant hub of like-minded individuals and businesses united by a shared mission: to make technology work for them.
+            <br /><br />Together, we harness our collective expertise and passion to empower, support, and inspire one another.
+        </p>
+        <h2 class="major">Join us: </h2>
+        <ul style="list-style: none;">
+            <li><strong>Weekly Webinars - </strong> Join me every Monday to learn more about upcoming tech solutions, building IT strategies and how using technology can lead to efficiencies</li>
+            <li><strong>Community Q&A's - </strong> Exclusivly for Members - Meet others in the community and bring your queries to the forum. Find how others are working and identify ideas for your business growth</li>
+            <li><strong>MasterClasses - </strong> Exclusivly for Members - join our masterclasses where we deep dive into products and tools, designed to help you get the best out of technology</li>
+        </ul>
+
+        <ul style="list-style: none;">
+            <!--<li><a href="#" class="dropdown-item">Register</a></li>-->
+            <li><a href="{% url 'login' %}" class="dropdown-item">Login</a></li>
+        </ul>
     </article>
 
     <!-- Contact -->
@@ -169,7 +224,7 @@
         <hr />
         <section>
             <div class="resourcesArrows">
-                <h2 class="major" id="materials">Materials</h2>                
+                <h2 class="major" id="materials">Materials</h2>
             </div>
             <span class="image main"><img src="{% static 'app/images/pic8.jpg' %}" alt="" /></span>
             <p>There are so many resources available and sometimes that can feel overwhelmng - below I have put together some items which I think will give you a great start in your journey.</p>
