@@ -1442,7 +1442,7 @@ body.is-preload #bg2:before {
         }
 
     #header .logo {
-        background-image:url('../images/logo.png');
+        /*background-image:url('../images/logo.png');*/
         background-size: 140%;
         background-repeat: no-repeat;
         width: 5.5rem;
